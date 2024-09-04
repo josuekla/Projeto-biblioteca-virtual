@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Importando Fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Castoro:ital@0;1&family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+
+    <!-- Importanto CSS -->
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/style_menu-sidebar.css">
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <title>Projeto biblioteca</title>
+    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+
+        <style>
+
+            :root{
+                --color-button: rgba(25, 106, 128, 1);
+            }
+
+            .container-perfil{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                max-height: 100vh;
+                margin-top: 20px;
+
+            }
+
+
+            .login-caixa{
+                width: 20%; 
+                font-family: "Inria Serif", serif;
+                font-weight: bold;
+                font-size: 2rem;
+                margin: 2rem 0m;
+                text-align: center;
+                border-radius: 5px;
+                box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.2);
+                background-color: var(--perfil-color);
+                padding: 2rem 4rem;
+                display: flex;
+                justify-content: center;
+                color: #ffffff;
+            }
+
+            .img{
+                width: 30vmin;
+            }
+
+            .voltar{
+                position: relative;
+                top: 100px;
+                background-color: var(--color-button);
+                padding: 1rem 3rem;
+                border-radius: 5px;
+                color: #fff;
+                font-size: 1.2rem;
+                transition: color 0.5s, outline 0.5s;
+            }
+            .voltar:hover{
+                text-decoration: none;
+                color: rgb(187, 255, 255);
+                outline: 1px solid black;
+            }
+
+
+        </style>
+
+</head>
+<body>
+
+    <!-- BARRAS DE MENU E SIDEBAR -->
+
+    <header class="header container_lateral">
+        <div class="logomarca"><img src="/img/Logomarca.png" alt="Logo marca Biblioteca virtual Liceu">
+        </div>
+    </header>
+
+<!-- BARRAS DE MENU E SIDEBAR -->
+
+
+
+
+
+<!-- CONTEÚDO DE PERFIL -->
+    
+    <div class="container-perfil">
+        <img
+            src="/img/perfil.png"
+            class="img"
+            alt="Imagem de perfil"
+        />
+        <a href="#" class="btn btn-primary login-caixa" style="color: #fff;">LOGIN</a>
+
+        <a class="voltar" href="home.html">
+            Voltar
+        </a>
+    </div>
+
+
+<!-- CONTEÚDO DE PERFIL -->
+
+
+
+
+
+
+
+
+    <script src="js/home.js" ></script>
+</body>
