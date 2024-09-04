@@ -1,0 +1,58 @@
+/* Importando textos */
+@import url('https://fonts.googleapis.com/css2?family=Castoro:ital@0;1&display=swap');
+
+
+
+body{
+    background-color: blue;
+    margin: 0;
+    padding: 0;
+    background: var(--color-main);
+
+}
+
+
+html{
+    font-size: 62.5%;
+}
+
+:root{
+    --primary-color-blue: rgba(9, 39, 80, 1);
+    --color-button: rgba(25, 106, 128, 1);
+    --color-font: rgba(0, 23, 232, 1);
+    --color-main: rgba(203, 203, 203, 1);
+    --quadrado-base: rgba(166, 166, 166, 1);
+    --perfil-color: rgba(80, 80, 120, 1);
+}
+
+
+
+.container_lateral{
+    background: var(--primary-color-blue);
+    min-width: 40vw;
+    max-width: 100vw;
+    height: 15.8rem;
+}
+
+.header{
+    display: flex;
+    padding: 3.5rem 1rem;
+    align-items: center;
+    flex: 1;
+}
+
+.list-main{
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+}
+
+.texto_perfil{
+    margin-top: 0;
+    font-family: "Castoro", serif;
+    font-weight: 500;
+    font-style: normal;
+    text-align: center;
+    color: rgba(152, 149, 149, 1);
+
+}
