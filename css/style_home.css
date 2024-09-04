@@ -25,7 +25,7 @@ html{
     --perfil-color: rgba(80, 80, 120, 1);
 }
 
-
+/* CSS da Nav */
 
 .container_lateral{
     background: var(--primary-color-blue);
@@ -39,13 +39,12 @@ html{
 
 .header{
     display: flex;
-    padding: 3.5rem 1rem;
+    padding: 3.5rem 4rem;
     align-items: center;
 }
 
 .logomarca  img{
     width: 40vmin;
-    padding-left: 2rem;
 }
 
 
@@ -53,16 +52,14 @@ html{
     list-style-type: none;
     display: flex;
     align-items: center;
-    gap: 15rem;
+    gap: 10vw;
     margin: 0;
     padding: 0;
 
     
 }
 
-.list-main li {
-    margin-right: 4rem;
-}
+
 
 #barraDePesquisa {
     display: flex;
@@ -117,4 +114,17 @@ html{
     text-align: center;
     color: rgba(152, 149, 149, 1);
     font-size: 1.5rem;
+}
+
+/* CSS do Side bar */
+
+
+.sidebar{
+    background-color: red;
+    width: 20vw;
+}
+
+.sidebar-nav{
+    display: flex;
+    flex-direction: column;
 }
