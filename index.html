@@ -64,14 +64,19 @@
         .btn-link{
             display: block;
             margin-top: 1rem;
+            background-color: var(--quadrado-base);
+            padding: 0.2rem 2rem;
+            border-radius: 5px;
+            color: var(--color-font);
         }
 
-        .form{
+        .label{
             display: flex;
             font-family: "Inria Serif", serif;
             font-weight: bold;
             font-size: 1.4rem;
             margin: 2rem 0 0;
+            color:var(--color-font)
         }
 
         .formulario-login{
@@ -81,15 +86,33 @@
             align-items: center;
         }
 
-        .caixa_formularios{
+        .content-formulario{
             width: 50%;
             border-radius: 10px;
+            
+        }
+        
+        
+        .form-control{
+            padding: 2rem 0.4rem;
+            box-shadow: 2px 2px 2px rgba(104, 104, 104, 20%);
+
         }
 
 
-        .form-control{
-            padding: 2rem 0.4rem;
-
+        .login-caixa{
+            width: 20%; 
+            font-family: "Inria Serif", serif;
+            font-weight: bold;
+            font-size: 1.4rem;
+            margin: 2rem 0 0;
+            text-align: center;
+            border-radius: 5px;
+            box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.2);
+            background-color: var(--perfil-color);
+            outline: 2px solid var(--perfil-color);
+            margin-bottom: 10px;
+    
         }
 
 
@@ -105,15 +128,20 @@
 
         
         <form action="https://www.google.com" method="get" class="formulario-login">
-            <div class="caixa_formularios">
-                <label for="email" class="form">Email</label>
-                <input type="email" class="form-control" id="email" placeholder="example@email.com">
+            <div class="content-formulario">
+                <label for="email" class="label">Email</label>
+                <input type="email" class="form-control" id="email" placeholder="example@email.com" required autofocus>
             </div>
 
-            <div class="caixa_formularios">
-                <label for="email" class="form">Senha</label>
-                <input type="senha" class="form-control" id="password" placeholder="123456">
+            <div class="content-formulario">
+                <label for="senha" class="label">Senha</label>
+                <input type="senha" class="form-control" id="password" placeholder="123456" required>
             </div>
+
+            <button type="submit" class="btn btn-primary login-caixa">LOGIN</button>
+        
+            <a href="#" class="link-secondary mt-2 btn-link">Entrar como visitante</a>
+            <a href="#" class="link-secondary btn-link">Criar Conta</a>
         </form>
     </div>
 
