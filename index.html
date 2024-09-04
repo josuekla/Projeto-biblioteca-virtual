@@ -69,7 +69,27 @@
         .form{
             display: flex;
             font-family: "Inria Serif", serif;
-            font-weight: 900;
+            font-weight: bold;
+            font-size: 1.4rem;
+            margin: 2rem 0 0;
+        }
+
+        .formulario-login{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .caixa_formularios{
+            width: 50%;
+            border-radius: 10px;
+        }
+
+
+        .form-control{
+            padding: 2rem 0.4rem;
+
         }
 
 
@@ -84,10 +104,15 @@
         <img class="perfil" src="img/perfil.png" alt="Imagem de perfil">
 
         
-        <form action="https://www.google.com" method="get">
-            <div class="md-3"  type="text">
+        <form action="https://www.google.com" method="get" class="formulario-login">
+            <div class="caixa_formularios">
                 <label for="email" class="form">Email</label>
-                <input type="email" class="form-control" id="password" placeholder="example@email.com">
+                <input type="email" class="form-control" id="email" placeholder="example@email.com">
+            </div>
+
+            <div class="caixa_formularios">
+                <label for="email" class="form">Senha</label>
+                <input type="senha" class="form-control" id="password" placeholder="123456">
             </div>
         </form>
     </div>
