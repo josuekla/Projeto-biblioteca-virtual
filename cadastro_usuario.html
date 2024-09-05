@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Importando Fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Castoro:ital@0;1&family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+
+    <!-- Importanto CSS -->
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/style_menu-sidebar.css">
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <title>Projeto biblioteca</title>
+    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+
+<style>
+
+
+:root{
+--primary-color-blue: rgba(9, 39, 80, 1);
+--color-button: rgba(25, 106, 128, 1);
+--color-font: rgba(0, 23, 232, 1);
+--color-main: rgba(203, 203, 203, 1);
+--quadrado-base: rgba(166, 166, 166, 1);
+--perfil-color: rgba(80, 80, 120, 1);
+}
+
+
+
+
+.formulario-cadastro {
+    max-height: 800px;
+    background-color: #fff;
+    padding: 2rem; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    width: 500px; 
+    max-width: 100%; 
+    margin: auto;
+    position: relative;
+    top: 11rem;
+}
+
+.content-formulario {
+    display: flex;
+    align-items: center; 
+    margin-bottom: 1rem; 
+}
+
+.label {
+    font-size: 1.5rem;
+    margin-right: 1.4rem;
+    font-weight: bold; 
+}
+
+.form-control {
+    padding: 2rem; 
+    border: 1px solid #ddd; 
+    border-radius: 4px;
+}
+
+.login-caixa {
+    width: 100%; 
+    padding: 0.75rem; /* Espaçamento interno */
+    border-radius: 4px; /* Bordas arredondadas */
+    background-color: var(--primary-color-blue); /* Cor do botão */
+    color: white; /* Cor do texto */
+    font-size:2rem;
+    cursor: pointer; 
+    transition: background-color 0.5s; 
+}
+
+.login-caixa:hover {
+    background-color: #0056b3; /* Cor ao passar o mouse */
+}
+
+            .voltar{
+                
+                position: relative;
+                top: 150px;
+                left: 47.5vw;
+                background-color: var(--color-button);
+                padding: 1rem 3rem;
+                border-radius: 5px;
+                color: #fff;
+                font-size: 1.2rem;
+                transition: color 0.5s, outline 0.5s;
+            }
+            .voltar:hover{
+                text-decoration: none;
+                color: rgb(187, 255, 255);
+                outline: 1px solid black;
+            }
+
+
+
+        </style>
+
+</head>
+<body>
+
+    <!-- BARRAS DE MENU E SIDEBAR -->
+
+    <header class="header container_lateral">
+        <div class="logomarca"><img src="/img/Logomarca.png" alt="Logo marca Biblioteca virtual Liceu">
+        </div>
+    </header>
+
+<!-- BARRAS DE MENU E SIDEBAR -->
+
+
+
+
+
+<!-- CONTEÚDO DE CADASTRO USUARIO -->
+    
+    <form action="/Pages_main/html/home.html" method="get" class="formulario-cadastro">
+        <div class="content-formulario">
+            <label for="nome" class="label">Nome</label>
+            <input type="text" class="form-control" id="nome" placeholder="Davi" required autofocus>
+        </div>
+
+        <div class="content-formulario">
+            <label for="email" class="label">Email</label>
+            <input type="email" class="form-control" id="email" placeholder="example@email.com" required>
+        </div>
+
+        <div class="content-formulario">
+            <label for="senha" class="label">Senha</label>
+            <input type="password" class="form-control" id="senha" required>
+        </div>
+
+        <div class="content-formulario">
+            <label for="nascimento" class="label">Data de nascimento</label>
+            <input type="date" class="form-control" id="nascimento" name="data" required min="1950-01-01" max="2025-01-01" >
+        </div>
+
+
+        <button type="submit" class="btn btn-primary login-caixa">Criar</button>
+    </form>
+
+    <a class="voltar" href="/Pages_visitante/html/perfil.html">
+        Voltar
+    </a>
+
+
+<!-- CONTEÚDO DE CADASTRO USUARIO -->
+
+
+
+
+
+
+
+
+    <script src="js/home.js" ></script>
+</body>
