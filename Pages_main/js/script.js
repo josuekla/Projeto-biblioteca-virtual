@@ -100,19 +100,26 @@ const booksDatabase = [
     { title: 'O Último Samurai' }
 ];
 
-// Função para validar e formatar datas
+// Função para validar as datas de entrega
 function validateDates(dataEntrega) {
-    const today = new Date();
-    const entrega = new Date(dataEntrega);
-    
-    // Verifica se a data de entrega é hoje ou no futuro
-    if (entrega < today.setHours(0, 0, 0, 0)) {
-        return 'A data de entrega deve ser hoje ou no futuro.';
+    const today = normalizeDate(new Date(+1)); // Data atual zerada
+    const entrega = normalizeDate(new Date(dataEntrega)); // Data de entrega zerada
+
+    // Define o limite máximo para 10 dias à frente
+    const maxDate = new Date(today);
+    maxDate.setDate(today.getDate() + 10);
+
+    // Verifica se a data de entrega é hoje ou dentro dos próximos 10 dias
+    if (entrega < today) {
+        return 'A data de entrega deve ser hoje ou dentro dos próximos 10 dias.';
+    }
+
+    if (entrega > maxDate) {
+        return 'A data de entrega não pode ser superior a 10 dias a partir de hoje.';
     }
 
     return null; // Sem erros
 }
-
 // Função para formatar uma data no formato dia/mês/ano
 function formatDate(date) {
     const day = String(date.getDate()).padStart(2, '0');
