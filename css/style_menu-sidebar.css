@@ -1,22 +1,19 @@
 /* Importando textos */
 @import url('https://fonts.googleapis.com/css2?family=Castoro:ital@0;1&display=swap');
 
-
-
-body{
+body {
     background-color: blue;
     margin: 0;
     padding: 0;
     background: var(--color-main);
-
+    height: 100%;
 }
 
-
-html{
-    font-size: 62.5%;
+html {
+    font-size: 62.5%; /* 1rem = 10px */
 }
 
-:root{
+:root {
     --primary-color-blue: rgba(9, 39, 80, 1);
     --color-button: rgba(25, 106, 128, 1);
     --secondary-color-button: rgb(0, 163, 208);
@@ -28,39 +25,33 @@ html{
 
 /* CSS da Nav */
 
-.container_lateral{
+.container_lateral {
     background: var(--primary-color-blue);
-    min-width: 40vw;
-    max-width: 100vw;
+    width: 100%;
     height: 15vh;
     display: flex;
     justify-content: space-between;
-    
+    padding: 0 2rem; /* Adiciona padding para melhor apresentação */
 }
 
-.header{
+.header {
     display: flex;
     padding: 3.5rem 4rem;
     align-items: center;
 }
 
-.logomarca  img{
-    width: 40vmin;
+.logomarca img {
+    width: 30vmin; /* Ajustado para responsividade */
 }
 
-
-.list-main{
+.list-main {
     list-style-type: none;
     display: flex;
     align-items: center;
     gap: 10vw;
     margin: 0;
     padding: 0;
-
-    
 }
-
-
 
 #barraDePesquisa {
     display: flex;
@@ -68,18 +59,16 @@ html{
     justify-content: center;
 }
 
-.input-container{
+.input-container {
     position: relative;
     width: max-content;
 }
 
-.input-container input{
+.input-container input {
     padding-left: 2.5rem;
-    height: 2.5rem;
     font-size: 1rem;
     height: 4vmin;
-    width:25vmin;
-    
+    width: 25vmin;
 }
 
 .input-container .filter-icon { 
@@ -101,13 +90,12 @@ html{
     color: #555; /* Cor quando o ícone é hoverado */
 }
 
-#pesquisa_header{
+#pesquisa_header {
     padding: 0.5rem 1.8rem;
     border-radius: 5px;
 }
 
-
-.texto_perfil{
+.texto_perfil {
     margin-top: 0;
     font-family: "Castoro", serif;
     font-weight: 500;
@@ -119,8 +107,15 @@ html{
 
 /* CSS do Side bar */
 
+.button_img {
+    background-color: transparent;
+}
 
-.sidebar{
+.toggle-sidebar{
+    background-color: transparent;
+}
+
+.sidebar {
     background-color: var(--primary-color-blue);
     width: 17vw;
     height: calc(100vh - 15vh);
@@ -129,22 +124,31 @@ html{
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* justify-content: center; */
+    position: fixed; /* Fixando a sidebar */
+    left: 0; /* Fixando a posição da sidebar */
+    top: 15vh; /* Ajuste para a altura da sidebar */
+    transition:  0.5s ease; /* Suave transição para o colapso */
 }
 
-.sidebar-nav{
+.sidebar.hidden {
+    transform: translateX(-100%); /* Esconde a sidebar fora da tela */
+}
+
+.sidebar.active {
+    left: 0; /* Mostra o sidebar */
+}
+
+
+.sidebar-nav {
     display: flex;
     flex-direction: column;
     list-style-type: none;
     gap: 7vh;
     margin: 0;
     padding: 11rem 0;
-
 }
 
-
-
-.texto_caixa{
+.texto_caixa {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -159,13 +163,114 @@ html{
     box-shadow: .4px 1px 5px rgba(0, 0, 0, 0.15);
     text-decoration: none;
     transition: background-color 0.5s, color 0.5s, outline 0.5s;
-    
 }
 
-.texto_caixa:hover{
+.texto_caixa:hover {
     text-decoration: none;
     background-color: var(--secondary-color-button);
     color: white;
     outline: 0.2px solid rgba(255, 255, 255, 0.677);
-    
+}
+
+/* Media Queries para Responsividade */
+
+@media (max-width: 1024px) {
+    .container_lateral {
+        padding: 0 1rem;
+    }
+
+    .list-main {
+        gap: 5vw; /* Ajuste para menos espaçamento em telas menores */
+    }
+
+    .logomarca img {
+        width: 35vmin; /* Ajuste para logo */
+    }
+
+    .sidebar {
+        width: 25vw; /* Ajuste para mais espaço em dispositivos menores */
+    }
+
+    .texto_caixa {
+        width: 15vw; /* Ajuste para maior responsividade */
+    }
+}
+
+@media (max-width: 768px) {
+    .container_lateral {
+        padding: 0 0.5rem;
+    }
+
+    .list-main {
+        flex-direction: column;
+        gap: 2rem; /* Ajuste para mais espaçamento em dispositivos menores */
+    }
+
+    .logomarca img {
+        width: 40vmin;
+    }
+
+    .sidebar {
+        width: 30vw;
+    }
+
+    .texto_caixa {
+        width: 80%;
+        font-size: 1.4rem; /* Ajuste para texto */
+    }
+}
+
+@media (max-width: 480px) {
+    .container_lateral {
+        padding: 0.5rem;
+    }
+
+    .list-main {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .logomarca img {
+        width: 45vmin;
+    }
+
+    .sidebar {
+        width: 100%;
+        position: static; /* Remove a fixação para layouts móveis */
+        transform: translateX(-100%); /* Inicialmente escondida */
+    }
+
+    .sidebar.hidden {
+        display: none; /* Alterna a visibilidade da sidebar */
+    }
+
+    .texto_caixa {
+        width: 100%;
+        font-size: 1.2rem; /* Ajuste para texto em dispositivos móveis */
+    }
+
+    .header {
+        padding: 2rem 1rem;
+    }
+}
+
+/* Botão para Mostrar/Ocultar a Sidebar */
+.menu-toggle {
+    display: none;
+}
+
+@media (max-width: 480px) {
+    .menu-toggle {
+        display: block;
+        position: fixed;
+        top: 15vh;
+        left: 0;
+        background-color: var(--primary-color-blue);
+        color: white;
+        padding: 1rem;
+        border: none;
+        cursor: pointer;
+        z-index: 10; /* Certifica-se de que o botão está sobre outros elementos */
+        font-size: 2rem; /* Ajusta o tamanho do ícone */
+    }
 }

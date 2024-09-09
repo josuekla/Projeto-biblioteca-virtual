@@ -1,0 +1,58 @@
+:root{
+    --primary-color-blue: rgba(9, 39, 80, 1);
+    --color-button: rgba(25, 106, 128, 1);
+    --color-font: rgba(0, 23, 232, 1);
+    --color-main: rgba(203, 203, 203, 1);
+    --quadrado-base: rgba(166, 166, 166, 1);
+    --perfil-color: rgba(80, 80, 120, 1);
+    }
+
+.formulario-cadastro {
+    position: relative;
+    max-height: 70vh;
+    min-height: 30vh;
+    width: 50vw;
+    margin: 10rem auto;
+    background-color: rgba(185, 185, 185, 0.127);
+    padding: 1rem;
+    box-shadow: .2px 2px 2px 1px rgba(0, 0, 0, 0.256);
+    left: 100px;
+}
+
+.content-formulario{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.label {
+    width: 150px; 
+    margin: 0;
+    padding: 1rem;
+    overflow: hidden; 
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 1.3rem;
+    font-weight: 900; 
+}
+
+
+.login-caixa {
+    width: 100%; 
+    padding: 0.75rem; /* Espaçamento interno */
+    border-radius: 4px; /* Bordas arredondadas */
+    background-color: var(--primary-color-blue); /* Cor do botão */
+    color: white; /* Cor do texto */
+    font-size:2rem;
+    cursor: pointer; 
+    transition: background-color 0.5s; 
+}
+
+.login-caixa:hover {
+    background-color: #0056b3; /* Cor ao passar o mouse */
+}   
+
+.form-control{
+    font-size: 2rem;
+    font-weight: 500;
+}

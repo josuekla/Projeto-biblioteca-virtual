@@ -1,0 +1,11 @@
+{
+    "liveServer.settings.multiRootWorkspaceName": "Projeto biblioteca",
+    "liveServer.settings.port": 5500,
+    "liveServer.settings.host": "127.0.0.1",
+    "liveServer.settings.ignoreFiles": [
+  "**/node_modules/**",
+  ".vscode/**"
+]
+
+    
+}
